@@ -63,7 +63,7 @@ export function Sidebar() {
       </Button>
       <div
         className={cn(
-          'w-full overflow-hidden -translate-x-full lg:translate-x-0 fixed lg:relative z-50 lg:w-[200px] lg:min-w-[200px] lg:max-w-[200px] drop-shadow-lg bg-background border-r border-r-accent transition-transform',
+          'w-full h-full overflow-hidden -translate-x-full lg:translate-x-0 fixed lg:relative z-50 lg:w-[200px] lg:min-w-[200px] lg:max-w-[200px] drop-shadow-lg bg-background border-r border-r-accent transition-transform',
           {
             'translate-x-0': expanded,
           },
