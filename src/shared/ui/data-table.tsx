@@ -53,7 +53,7 @@ export function DataTable<TData, TValue>(
 
                 const label = header.column.getCanSort() ? (
                   <button
-                    className="cursor-pointer flex items-center gap-1"
+                    className="flex cursor-pointer items-center gap-1"
                     onClick={header.column.getToggleSortingHandler()}
                   >
                     {children}
@@ -152,7 +152,7 @@ function Filter<TData, TValue>({
               ? `(${column.getFacetedMinMaxValues()?.[0]})`
               : ''
           }`}
-          className="w-28 border shadow rounded"
+          className="w-28 rounded border shadow"
         />
         <Input
           type="number"
@@ -171,7 +171,7 @@ function Filter<TData, TValue>({
               ? `(${column.getFacetedMinMaxValues()?.[1]})`
               : ''
           }`}
-          className="w-28 border shadow rounded"
+          className="w-28 rounded border shadow"
         />
       </div>
       <div className="h-1" />
@@ -191,7 +191,7 @@ function Filter<TData, TValue>({
         value={(columnFilterValue ?? '') as string}
         onChange={(event) => column.setFilterValue(event.target.value)}
         placeholder={`Search... (${column.getFacetedUniqueValues().size})`}
-        className="w-36 border shadow rounded"
+        className="w-36 rounded border shadow"
         list={column.id + 'list'}
       />
       <div className="h-1" />

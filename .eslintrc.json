@@ -1,5 +1,5 @@
 {
-  "extends": "next",
+  "extends": ["next"],
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "import/no-restricted-paths": ["error"],

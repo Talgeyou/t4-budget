@@ -74,7 +74,7 @@ export function ExpenseTagsSelector(props: Props) {
                   }
                 />
                 <div
-                  className="w-4 h-4"
+                  className="h-4 w-4"
                   style={{ backgroundColor: tag.color }}
                 />
                 <span>{tag.label}</span>

@@ -16,7 +16,7 @@ export default async function AuthPage() {
   }
 
   return (
-    <main className="h-screen grid place-items-center">
+    <main className="grid h-screen place-items-center">
       <AuthForm />
     </main>
   );

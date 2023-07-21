@@ -32,7 +32,7 @@ export function SignOutButton() {
 
   return (
     <Button
-      className="w-full flex items-center gap-2"
+      className="flex w-full items-center gap-2"
       variant="destructive"
       disabled={loading}
       onClick={handleClick}

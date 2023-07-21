@@ -1,18 +1,23 @@
+'use client';
+
 import { CgUser } from 'react-icons/cg';
-import { UserAvatar } from '~/entities/user';
-import { getAuthSession } from '~/shared/auth';
+import { UserAvatar, UserAvatarSkeleton, useFetchMe } from '~/entities/user';
 
-export async function SidebarUser() {
-  const session = await getAuthSession();
+export function SidebarUser() {
+  const { data: userData, status: userStatus } = useFetchMe();
 
-  const avatar = session?.user ? (
+  const avatar = userData ? (
     <UserAvatar
-      user={session.user}
+      user={userData}
       size="lg"
     />
   ) : (
     <CgUser size="4rem" />
   );
 
-  return <div className="w-full p-4 grid place-items-center">{avatar}</div>;
+  return (
+    <div className="grid w-full place-items-center p-4">
+      {userStatus === 'loading' ? <UserAvatarSkeleton size="lg" /> : avatar}
+    </div>
+  );
 }

@@ -50,7 +50,6 @@ export function IncomesTable() {
             currenciesData,
             onDelete: deleteIncome,
           })}
-          debugTable
           state={{ sorting, columnFilters }}
           data={incomesData ?? []}
           onSortingChange={setSorting}

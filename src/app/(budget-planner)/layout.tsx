@@ -16,7 +16,7 @@ export default async function BudgetPlannerLayout(props: Props) {
   }
 
   return (
-    <div className="flex w-full h-screen">
+    <div className="flex h-screen w-full">
       <Sidebar />
       <main className="w-full overflow-y-auto">{children}</main>
     </div>

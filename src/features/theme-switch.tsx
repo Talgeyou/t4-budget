@@ -21,8 +21,8 @@ export function ThemeSwitch() {
   if (!mounted) {
     return (
       <div className="flex items-center space-x-2">
-        <Skeleton className="w-9 h-5" />
-        <Skeleton className="w-20 h-4" />
+        <Skeleton className="h-5 w-9" />
+        <Skeleton className="h-4 w-20" />
       </div>
     );
   }

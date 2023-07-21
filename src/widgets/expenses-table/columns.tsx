@@ -124,7 +124,7 @@ export const getExpensesColumns = (
         return (
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="w-full flex justify-end">
+              <div className="flex w-full justify-end">
                 <Button
                   variant="ghost"
                   className="h-8 w-8 p-0"

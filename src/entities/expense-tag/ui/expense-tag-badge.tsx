@@ -10,7 +10,7 @@ export function ExpenseTagBadge(props: Props) {
 
   return (
     <span
-      className="block p-1 rounded-lg"
+      className="block rounded-lg p-1"
       style={{
         backgroundColor: tag.color,
         color: getContrastTextColor(tag.color),

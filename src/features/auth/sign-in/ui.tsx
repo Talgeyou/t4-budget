@@ -33,7 +33,7 @@ export function SignInButton() {
 
   return (
     <Button
-      className="flex items-center gap-2 w-full"
+      className="flex w-full items-center gap-2"
       disabled={loading}
       onClick={handleClick}
     >

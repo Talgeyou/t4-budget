@@ -19,7 +19,7 @@ import { Skeleton } from '~/shared/ui/skeleton';
 import { getExpensesColumns } from './columns';
 
 export function ExpensesTableSkeleton() {
-  return <Skeleton className="w-full h-24" />;
+  return <Skeleton className="h-24 w-full" />;
 }
 
 export function ExpensesTable() {
@@ -47,7 +47,6 @@ export function ExpensesTable() {
             currenciesData,
             onDelete: deleteExpense,
           })}
-          debugTable
           state={{ sorting, columnFilters }}
           data={expensesData ?? []}
           onSortingChange={setSorting}

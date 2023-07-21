@@ -5,8 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '~/shared/ui/avatar';
 const variants = cva('', {
   variants: {
     size: {
-      DEFAULT: 'w-10 h-10',
-      lg: 'w-16 h-16',
+      DEFAULT: 'h-10 w-10',
+      lg: 'h-16 w-16',
     },
   },
   defaultVariants: {

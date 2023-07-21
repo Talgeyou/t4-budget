@@ -149,7 +149,7 @@ export function IncomeUpdateForm(props: Props) {
 
                             return (
                               <li
-                                className="p-1 rounded-lg"
+                                className="rounded-lg p-1"
                                 key={tagId}
                                 style={{ backgroundColor: tag?.color }}
                               >
@@ -182,7 +182,7 @@ export function IncomeUpdateForm(props: Props) {
                               }
                             />
                             <div
-                              className="w-4 h-4"
+                              className="h-4 w-4"
                               style={{ backgroundColor: tag.color }}
                             />
                             <span>{tag.label}</span>

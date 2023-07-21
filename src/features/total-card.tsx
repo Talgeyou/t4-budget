@@ -73,7 +73,7 @@ export function TotalCard<T extends TotalDataItem>(props: Props<T>) {
             />
           </div>
           {currenciesStatus === 'loading' ? (
-            <Skeleton className="w-[9ch] h-7" />
+            <Skeleton className="h-7 w-[9ch]" />
           ) : (
             <span className="text-lg font-medium">
               {getFormattedMoney(total, selectedCurrency)}

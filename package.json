@@ -53,8 +53,10 @@
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^4.29.25",
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "prisma": "^5.0.0"
   }
 }
