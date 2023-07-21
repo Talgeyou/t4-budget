@@ -1,0 +1,65 @@
+{
+  "extends": "next",
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "import/no-restricted-paths": ["error"],
+    "import/no-useless-path-segments": "error",
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "react/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next/**",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "~/widgets/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "~/features/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "~/entities/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "~/shared/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["sibling", "index", "type"]
+        ],
+        "pathGroupsExcludedImportTypes": []
+      }
+    ],
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/prefer-query-object-syntax": "error"
+  },
+  "plugins": ["@typescript-eslint", "@tanstack/query"]
+}
