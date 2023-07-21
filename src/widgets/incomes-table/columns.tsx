@@ -4,6 +4,7 @@ import { CgMoreVertical } from 'react-icons/cg';
 import { IncomeUpdateForm } from '~/features/income/update';
 import { IncomeTagCreateDialog } from '~/features/income-tag/create';
 import { sortByConvertedCurrencyValue } from '~/entities/currency';
+import { IncomeTagBadge } from '~/entities/income-tag';
 import { getFormattedMoney } from '~/shared/lib/get-formatted-money';
 import { Button } from '~/shared/ui/button';
 import {
@@ -55,12 +56,8 @@ export function getIncomesColumns(params: GetIncomesColumnsParams): ColumnDef<
         return (
           <ul className="flex flex-wrap gap-2">
             {tags.map((item) => (
-              <li
-                key={item.id}
-                className="p-1 rounded-lg"
-                style={{ backgroundColor: item.tag.color }}
-              >
-                {item.tag.label}
+              <li key={item.id}>
+                <IncomeTagBadge tag={item.tag} />
               </li>
             ))}
           </ul>

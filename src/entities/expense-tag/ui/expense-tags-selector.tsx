@@ -5,6 +5,7 @@ import { ExpenseTag } from '@prisma/client';
 import { buttonVariants } from '~/shared/ui/button';
 import { Checkbox } from '~/shared/ui/checkbox';
 import { Popover, PopoverContent, PopoverTrigger } from '~/shared/ui/popover';
+import { ExpenseTagBadge } from './expense-tag-badge';
 
 type Props = {
   value: string[];
@@ -43,13 +44,13 @@ export function ExpenseTagsSelector(props: Props) {
             {value.map((tagId) => {
               const tag = options.find((tag) => tag.id === tagId);
 
+              if (!tag) {
+                return null;
+              }
+
               return (
-                <li
-                  className="p-1 rounded-lg"
-                  key={tagId}
-                  style={{ backgroundColor: tag?.color }}
-                >
-                  {tag?.label ?? tagId}
+                <li key={tagId}>
+                  <ExpenseTagBadge tag={tag} />
                 </li>
               );
             })}

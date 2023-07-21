@@ -28,7 +28,7 @@ const sidebarItems: SidebarNavigationItem[] = [
 
 export function Sidebar() {
   return (
-    <aside className="min-w-[200px] max-w-[200px] drop-shadow-lg bg-background">
+    <aside className="min-w-[200px] max-w-[200px] drop-shadow-lg bg-background border-r border-r-accent">
       <SidebarUser />
 
       <Separator />

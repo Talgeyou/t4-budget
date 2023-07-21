@@ -4,6 +4,7 @@ import { CgMoreVertical } from 'react-icons/cg';
 import { ExpenseUpdateForm } from '~/features/expense/update';
 import { ExpenseTagCreateDialog } from '~/features/expense-tag/create';
 import { sortByConvertedCurrencyValue } from '~/entities/currency';
+import { ExpenseTagBadge } from '~/entities/expense-tag';
 import { getFormattedMoney } from '~/shared/lib/get-formatted-money';
 import { Button } from '~/shared/ui/button';
 import {
@@ -63,17 +64,13 @@ export const getExpensesColumns = (
       },
       header: 'Tags',
       cell: ({ row }) => {
-        const tags = row.original.tags.map((item) => item.tag);
+        const tags = row.original.tags;
 
         return (
           <ul className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <li
-                key={tag.id}
-                className="p-1 rounded-lg"
-                style={{ backgroundColor: tag.color }}
-              >
-                {tag.label}
+            {tags.map((item) => (
+              <li key={item.id}>
+                <ExpenseTagBadge tag={item.tag} />
               </li>
             ))}
           </ul>
