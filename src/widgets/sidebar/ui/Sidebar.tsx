@@ -52,7 +52,7 @@ export function Sidebar() {
   return (
     <aside className="relative">
       <Button
-        className="absolute right-0 top-12 h-fit w-fit translate-x-full lg:hidden"
+        className="fixed left-0 top-12 h-fit w-fit lg:hidden rounded-l-none"
         onClick={handleToggle}
       >
         {expanded ? (
