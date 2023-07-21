@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Expenses | T4 Budget',
+  description: 'Your expenses',
+};
+
 type Props = {
   children: React.ReactNode;
 };
