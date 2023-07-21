@@ -1,5 +1,6 @@
 import { CgTemplate, CgTrending, CgTrendingDown } from 'react-icons/cg';
 import { SignOutButton } from '~/features/auth/sign-out/ui';
+import { ThemeSwitch } from '~/features/theme-switch';
 import { Separator } from '~/shared/ui/separator';
 import { SidebarNavigationItem } from './SidebarNavigationItem';
 import { SidebarUser } from './SidebarUser';
@@ -41,6 +42,12 @@ export function Sidebar() {
           ))}
         </ul>
       </nav>
+
+      <Separator />
+
+      <div className="p-4">
+        <ThemeSwitch />
+      </div>
 
       <Separator />
 
